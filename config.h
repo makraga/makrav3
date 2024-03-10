@@ -1,21 +1,18 @@
-// Copyright 2023 makraboard (@makraga)
+/ Copyright 2024 itzhakt (@makraga)
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #pragma once
 
-/* Encoder*/
-#define ENCODER_RESOLUTION 2
-
-/* RGB settings. */
-
-#define RGBLIGHT_LIMIT_VAL 120
-
-/* Reset. */
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET
-#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_LED GP17
-#define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 1000U
+/* Serial connection between halfs */
+#define SERIAL_USART_FULL_DUPLEX
+#define SERIAL_USART_TX_PIN GP12
+#define SERIAL_USART_RX_PIN GP13
 
-//I2C config
+/* I2C config for display */
 #define I2C_DRIVER I2CD1
-#define I2C1_SDA_PIN GP8
-#define I2C1_SCL_PIN GP9
+#define I2C1_SCL_PIN GP11
+#define I2C1_SDA_PIN GP10
+
+#define MATRIX_ROWS 10
+#define MATRIX_COLS 7
