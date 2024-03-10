@@ -1,21 +1,15 @@
-# MCU name
-MCU = RP2040
+# This version is for rp2040 zero
 
-#Bootloader selection
-#BOOTLOADER = rp2040
-
+SERIAL_DRIVER = vendor
 
 # Build Options
-#   change yes to no to disable
-#
-LTO_ENABLE = yes
-RGBLIGHT_ENABLE = yes
-
+OLED_ENABLE = yes
+OLED_DRIVER = SSD1306      # Enables the use of OLED displays
 WS2812_DRIVER = vendor
 
-OLED_ENABLE = yes
-OLED_DRIVER = SSD1306
+BACKLIGHT_ENABLE = no      # Enable keyboard backlight functionality
 
-OPT_DEFS += -DHAL_USE_I2C=TRUE
+SPLIT_KEYBOARD = yes       # Split common
+LTO_ENABLE = yes
 
-WPM_ENABLE = yes
+RGBLIGHT_ENABLE = yes       # Enable keyboard RGB underglow
